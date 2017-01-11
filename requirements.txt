@@ -1,1 +1,1 @@
-pyalexa-skill==0.0.6
+pyalexa-skill==0.2.6

@@ -1,7 +1,7 @@
-from pyalexaskill import AlexaBaseHandler
+from pyalexaskill.AlexaBaseHandler import AlexaBaseHandler
 
 
-class AlexaDeploymentTestHandler(AlexaBaseHandler.AlexaBaseHandler):
+class AlexaDeploymentTestHandler(AlexaBaseHandler):
     """
     Sample concrete implementation of the AlexaBaseHandler to test the
     deployment scripts and process.
@@ -34,7 +34,7 @@ class AlexaDeploymentTestHandler(AlexaBaseHandler.AlexaBaseHandler):
         return self._test_response("on processing error")
 
 
-    def on_launch(self, launch_request, session):
+    def on_launchrequest(self, launch_request, session):
         return self._test_response("on launch")
 
 
