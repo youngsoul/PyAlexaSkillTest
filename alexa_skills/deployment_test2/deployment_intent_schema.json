@@ -3,6 +3,11 @@
     {
       "intent": "DeploymentIntent",
       "slots": []
+    },
+    {
+      "intent": "SayHelloIntent",
+      "slots": []
     }
+
   ]
 }

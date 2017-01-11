@@ -17,7 +17,7 @@ class AlexaDeploymentTestHandler(AlexaBaseHandler):
         session_attributes = {}
         card_title = "Test Response"
         card_output = "Test card output"
-        speech_output = "Welcome to the Python Alexa Test Deployment for request type {0}.  It seems to have worked".format(
+        speech_output = "Welcome to the Python Alexa Test Deployment.  {0}.  It seems to have worked".format(
             msg)
         # If the user either does not reply to the welcome message or says something
         # that is not understood, they will be prompted again with this text.
@@ -31,20 +31,23 @@ class AlexaDeploymentTestHandler(AlexaBaseHandler):
 
 
     def on_processing_error(self, event, context, exc):
-        return self._test_response("on processing error")
+        return self._test_response("Request type on processing error")
 
 
     def on_launchrequest(self, launch_request, session):
-        return self._test_response("on launch")
+        return self._test_response("Request type on launch")
 
 
     def on_session_started(self, session_started_request, session):
-        return self._test_response("on session started")
+        return self._test_response("Request type on session started")
 
 
     def on_intent(self, intent_request, session):
-        return self._test_response("on intent")
+        return self._test_response("Request type on intent")
 
 
     def on_session_ended(self, session_end_request, session):
-        return self._test_response("on session end")
+        return self._test_response("Request type on session end")
+
+    def on_sayhellointent_intent(self, intent_request, session ):
+        return self._test_response("I just wanted to say hello")
